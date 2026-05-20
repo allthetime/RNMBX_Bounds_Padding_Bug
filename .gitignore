@@ -1,3 +1,5 @@
+config.ts
+.env
 # OSX
 #
 .DS_Store

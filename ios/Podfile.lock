@@ -3,6 +3,14 @@ PODS:
   - hermes-engine (250829098.0.10):
     - hermes-engine/Pre-built (= 250829098.0.10)
   - hermes-engine/Pre-built (250829098.0.10)
+  - MapboxCommon (24.20.3):
+    - Turf (= 4.0.0)
+  - MapboxCoreMaps (11.20.3):
+    - MapboxCommon (= 24.20.3)
+  - MapboxMaps (11.20.3):
+    - MapboxCommon (= 24.20.3)
+    - MapboxCoreMaps (= 11.20.3)
+    - Turf (= 4.0.0)
   - RCTDeprecation (0.85.3)
   - RCTRequired (0.85.3)
   - RCTSwiftUI (0.85.3)
@@ -1856,6 +1864,34 @@ PODS:
     - React-utils (= 0.85.3)
     - ReactNativeDependencies
   - ReactNativeDependencies (0.85.3)
+  - rnmapbox-maps (10.3.1):
+    - MapboxMaps (~> 11.20.1)
+    - React
+    - React-Core
+    - rnmapbox-maps/DynamicLibrary (= 10.3.1)
+    - Turf
+  - rnmapbox-maps/DynamicLibrary (10.3.1):
+    - hermes-engine
+    - MapboxMaps (~> 11.20.1)
+    - RCTRequired
+    - RCTTypeSafety
+    - React
+    - React-Core
+    - React-Core-prebuilt
+    - React-featureflags
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - ReactNativeDependencies
+    - Turf
+    - Yoga
+  - Turf (4.0.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1934,7 +1970,15 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios/ReactCodegen`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeDependencies (from `../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec`)
+  - "rnmapbox-maps (from `../node_modules/@rnmapbox/maps`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  trunk:
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxMaps
+    - Turf
 
 EXTERNAL SOURCES:
   FBLazyVector:
@@ -2086,12 +2130,17 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeDependencies:
     :podspec: "../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec"
+  rnmapbox-maps:
+    :path: "../node_modules/@rnmapbox/maps"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   FBLazyVector: 24e62c765683b8d89006a88a2c8f5cf019f0074d
   hermes-engine: a838e14d4b691a9de01f15f90ead9c858aef3e8b
+  MapboxCommon: bd1554a0c6e66ac04c9ecd3611f3b7d772eeac7e
+  MapboxCoreMaps: 821019cdd87447ecd895872f4095232723961627
+  MapboxMaps: 6191d857abe0da0f3bdfb5a71349c532d55d7d9d
   RCTDeprecation: a4c521821fab57cbb125b36effe84d897d0dfa12
   RCTRequired: 9f3a7e5645d4bc3f551593de7550bb66ab6e42bc
   RCTSwiftUI: 239ed2eb9e73de5a6f518810630f0c95e01c8702
@@ -2164,8 +2213,10 @@ SPEC CHECKSUMS:
   ReactCodegen: c8f81e6c6f762dcf442a6203a1fb58f7dafc8014
   ReactCommon: 7dfc3250793bf36cf221096ff59e1179e13eef7f
   ReactNativeDependencies: d1196b6dbe936dcfa78dcd9e13086633174e9c69
+  rnmapbox-maps: 424ce5b089be0d753083b5ad70a3959eb8603891
+  Turf: c9eb11a65d96af58cac523460fd40fec5061b081
   Yoga: 36fee8f1fca3f54a28c3d7f80e69f66d73d3af96
 
 PODFILE CHECKSUM: e12dd46bbc0a6300f3bcdf1637038429b14cce33
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
